@@ -15,6 +15,9 @@ public class Restaurant {
         this.location = location;
         this.openingTime = openingTime;
         this.closingTime = closingTime;
+        this.menu.add(new Item("Bread omblet",50));
+        this.menu.add(new Item("Chicken Nuggets",150));
+        this.menu.add(new Item("Milk shake",120));
     }
 
     public LocalTime getOpeningTime() { return openingTime; }
@@ -79,5 +82,11 @@ public class Restaurant {
         return name;
     }
 
-    
+    public int getOrderValue(List<Item> item){
+        int totalValue = 0;
+        for (Item myItem : item) {
+            totalValue += myItem.getPrice();
+        }
+        return totalValue;
+    }
 }
