@@ -29,8 +29,7 @@ class RestaurantServiceTest {
     @Test
     public void searching_for_non_existing_restaurant_should_throw_exception() throws restaurantNotFoundException {
       addRestaurant();
-        assertThrows(restaurantNotFoundException.class,()->{
-                    service.findRestaurantByName("Amelia");});
+        assertThrows(restaurantNotFoundException.class,()->{service.findRestaurantByName("Amelia");});
     }
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 

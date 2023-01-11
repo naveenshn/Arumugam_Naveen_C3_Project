@@ -17,6 +17,17 @@ public class Restaurant {
         this.closingTime = closingTime;
     }
 
+    public LocalTime getOpeningTime() { return openingTime; }
+
+    public void setOpeningTime(LocalTime openingTime) {
+        this.openingTime = openingTime;
+    }
+
+    public LocalTime getClosingTime() { return closingTime; }
+
+    public void setClosingTime(LocalTime closingTime) {
+        this.closingTime = closingTime;
+    }
     public boolean isRestaurantOpen() {
         LocalTime time = LocalTime.now();
         int resClosing = time.compareTo(closingTime);
@@ -68,4 +79,5 @@ public class Restaurant {
         return name;
     }
 
+    
 }
